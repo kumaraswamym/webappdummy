@@ -6,6 +6,7 @@
 	<property name="source.dir" value="src" />
 	<property name="web.dir" value="WebContent" />
 	<property name="war.dir" value="wars" />
+	<property name="jar.dir" value="jars" /
 	
 	<path id="project_classpath" >
 	 <pathelement path="${web.dir}/WEB-INF/lib/servlet-api-2.5.jar"/>
@@ -17,13 +18,13 @@
 	  </tstamp>
 	<target name="delete" >
 		<delete dir="${web.dir}/WEB-INF/classes" />
-<delete dir="${war.dir}" />		
+		<delete dir="${war.dir}" />		
 	</target>
 	
 	<target name="init" >
 		<mkdir dir="${web.dir}/WEB-INF/classes" />
 		<mkdir dir="${war.dir}" />
-		</target>
+	</target>
 	
 	<target name="compile" >
 		<javac srcdir="${source.dir}" destdir="${web.dir}/WEB-INF/classes" classpathref="project_classpath" >
